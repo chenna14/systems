@@ -1,0 +1,18 @@
+sed - stream editor
+
+works only on the selected lines.
+
+can do limited set of work on selected lines.
+
+Run sed as:
+  
+  sed <OpTIONS> 'LINE-SET-CRIT COMMAND(S) <ARG(S)>' <FILE(S)>
+
+here it need not be pattern searching(difference between sed and grep)
+
+if comands are wriiten in commandfile
+
+run as sed as 
+sed <OPTIONS> -F COMMANDFILE <FILE(S)>
+
+

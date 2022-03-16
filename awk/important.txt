@@ -1,0 +1,9 @@
+run as :
+gawk <OPTIONS>  'COMMANDS' <FILE(s)>
+here we no longer talk about regular expressions although it can be done.
+we usually write commands in the file and run with -f.
+
+records and fields
+
+
+

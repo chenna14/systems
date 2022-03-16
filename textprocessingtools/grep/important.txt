@@ -1,0 +1,39 @@
+grep - Global Regular Expression print.
+locates lines that contains match of regular expressions
+may or maynot highlight the match.
+
+run grep as:
+
+  grep <OPTIONS> <PATTERN> <FILE(S)>
+
+pattern is a regular expression.
+
+grep line textfile.txt print lines that contains line.
+
+use grep-e method as or.
+
+for example
+
+grep -e 'method ' -e line textfilel.txt
+
+gives lines containing anyone or both.
+
+what if we want only containing both?
+
+to want lines wwhich do not contain regular expression use option -v
+
+grep -v '[A-Z]' textfile.txt 
+
+use -i for case insensitive search
+
+for word based search use -w
+
+grep '[A-Z]' textfile.txt incluse Chenna but if we use -w it will not include.
+
+use -n to print the lines numbers also.
+
+for recursive search in the current directory use -r or -R.
+
+to print only file names use -l.
+
+

@@ -1,0 +1,20 @@
+gprof deals with running time.
+we need a profiler to moniter the performance of the program.
+gprof is a profiler that helps you achieve that.
+it measueres the relative performance of the functions in program.
+
+
+
+1.flat profile
+2.The call graph
+3. A detailed instruction on how to interpret the above two tables.
+
+In flat profile
+1. %time
+2. Self time
+3.cumulative time
+4.calls
+5. Average self time per call
+6. Average total time per call
+etc
+

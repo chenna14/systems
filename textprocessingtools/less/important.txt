@@ -1,0 +1,38 @@
+unix provides a lot of utilities to procoess the text files.
+
+(sort) sorts a file.
+(uniq) removes duplicate lines in a sorted file.
+(wc) reports counts of characters, words, and lines in one or more files.
+
+pattern matching on regular expressions is useful.
+(grep)
+(sed)
+(awk)
+
+use less -N file name to search for particular word or alphabet.(affter running the command click / and then proceed)
+
+. indicates any single character (so f.a will highlight flat)
+
+[AEIOU] matches any single vowel(uppercase)
+[Bb] matches uppercase b or lowercase b
+[a-z] matches any lowercase alphabet
+[a-zA-Z] matches any alphabet
+[A-Z][a-z ][a-z ].(matches regular expressions with uppercase character followed by lowercase character or space followed by lowercase character or space then anything.)
+
+use ^ for negation.
+
+[^ ] matches anything other than space.
+[^AEIOUaeiou] matches anything other than vowel
+
+use * for multpile
+
+[a-z]* matches for any sequence of lowercase alphabets
+
+[^a-zA-Z]* matches any sequence other than alphabetic
+
+if you want to start matching from beginning of the line, use ^ as the first symbol.
+if you want the match to finish at the end use $ as the last symbol.
+
+^[a-zA-Z, ]*$ matches the lines starting at beginning of line and ending at end of line and having olnly alphabets or space or , inbetween the line.
+
+. gives any character so to match to . use specaial characters. \.

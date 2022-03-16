@@ -1,0 +1,2 @@
+valgrind is a memory debugging tool.
+now we only use memcheck feature.(memory leaks and invalid memory access.)

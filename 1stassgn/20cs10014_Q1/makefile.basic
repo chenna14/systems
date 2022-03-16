@@ -1,0 +1,32 @@
+SHELL = /bin/sh
+CC = gcc
+CFLAGS = -Wall -fPIC
+LIBNAME = liblibassgn1.so
+OBJFILES = linked_list.o stack_usinglist.o queue_usinglist.o heap_1.o union_find.o
+
+library: linked_list.o stack_usinglist.o queue_usinglist.o heap_1.o union_find.o 
+	$(CC) -shared -o $(LIBNAME) $(OBJFILES)
+
+linked_list.o: defs.h linked_list.h 
+stack_usinglist.o: defs.h stack_usinglist.h linked_list.h 
+queue_usinglist.o: defs.h linked_list.h queue_usinglist.h
+heap_1.o: heap_1.h
+union_find.o: union_find.h
+
+LIBDIR = /usr/local/lib
+INCLUDEDIR = /usr/include
+INCLUDESUBDIR = $(INCLUDEDIR)/lib
+
+install: library
+	cp $(LIBNAME) $(LIBDIR)
+	-mkdir $(INCLUDESUBDIR)
+	cp defs.h linked_list.h stack_usinglist.h queue_usinglist.h heap_1.h union_find.h $(INCLUDESUBDIR)
+	cp libassgn1.h $(INCLUDEDIR)
+
+RM = rm -f
+
+clean:
+	-$(RM) $(OBJFILES)
+
+distclean:
+	-$(RM) $(OBJFILES) $(LIBNAME)

@@ -1,0 +1,12 @@
+SHELL = /bin/sh
+CFLAGS = -Wall
+EXENAME = graph.out
+LIBRARIES = -llibassgn2 -llibassgn1
+LIBDIR = /usr/local/lib
+Exe_file: main.c
+	gcc $(CFLAGS) main.c -o $(EXENAME) $(LIBRARIES)
+
+RM = rm -f
+
+clean:
+	-$(RM) $(EXENAME)

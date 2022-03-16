@@ -1,0 +1,38 @@
+gdb is one of the debugger
+
+u can add gdb while compiling by gcc -Wall -g area.c(note the -g option indicating gdb)
+then u type gdb ./a.out(note extra gdb)
+
+then there are certain gdb commands u can use.
+
+(run ) to run
+(list ) to list the code say in multiples of 10
+list 1,20 to list the code between those lines.
+
+(break 11) it will break at that line and then u need to type next for every execution.
+(continue) to run normally untill next break or program closes.
+
+you can use shortcuts like r for runm q for quit, b for break etc.
+
+info break to list all breakpoints.
+
+disable 3 to (disable the 3rd break in info break list)
+you can use enable 3 to again enable.
+
+you can use delete 3 to permanently delete the break.
+
+(print x1) you can use at any point to know what x1 valus is entered.
+
+nothing is special about loops.
+
+next and step are different when there is a function call.
+
+next does not go into function call while step goes into function call.
+
+if you want to go into recursive calls use steps before such calls.
+
+finish or return leaves the function without furthur stepping.
+
+finish continues normally to the end of the function print the returned value and adds this to value history.
+
+return leaves function immediately after you ask gdb to do so.
